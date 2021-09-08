@@ -23,42 +23,6 @@ type App struct {
 func (a *App) Initialize() {}
 func (a *App) Run(addr string) {}
 
-type struct Settings {
-    application ApplicationSettings,
-    database DatabaseSettings,
-}
-
-
-type struct ApplicationSettings {
-    port int,
-    host string,
-}
-
-
-type struct DatabaseSettings {
-	uname string,
-	password string,
-	port int,
-	host string,
-	database_name string,
-}
-
-type struct Environment {
-	Local string,
-	Test string,
-	Production string,
-	Stagging string,
-}
-
-
-
-func (d *DatabaseSettings) conn_str() string {
-	return fmt.Sprintf("postgres://%s:%s@%s:%d/%s", d.uname, d.password, d.host, d.port, d.database_name)
-}
-
-func (d *DatabaseSettings) default_conn_str() string {
-	return fmt.Sprintf("postgres://%s:%s@%s:%d/postgres", d.uname, d.password, d.host, d.port)
-}
 
 
 func (a *App) initStore() (*sql.DB, error) {
