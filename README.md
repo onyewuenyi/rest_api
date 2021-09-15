@@ -15,6 +15,8 @@ go mod init github.com/onyewuenyi/zero2prod_golang
 go get -u github.com/gorilla/mux 
 go get -u github.com/lib/pq
 
+# stuff I dont like about go
+no default values in function parameters 
 
 # Create project structure
 touch app.go
