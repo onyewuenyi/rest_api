@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/onyewuenyi/rest_api/pkg/api"
+	"github.com/onyewuenyi/rest_api/pkg/api/api"
 )
 
 func main() {
