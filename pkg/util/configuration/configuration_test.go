@@ -28,12 +28,12 @@ func TestLoadConfig(t *testing.T) {
 			name: "development",
 			wantData: &configuration.Configuration{
 				Server: &configuration.Server{
-					Port: 8000,
+					Port: "8000",
 					Host: "127.0.0.1",
 				},
 				Database: &configuration.Database{
 					Host:          "localhost",
-					Port:          5432,
+					Port:          "5432",
 					Uname:         "charlesonyewuenyi",
 					Password:      "password",
 					Database_name: "newsletter",
@@ -44,12 +44,12 @@ func TestLoadConfig(t *testing.T) {
 			name: "production",
 			wantData: &configuration.Configuration{
 				Server: &configuration.Server{
-					Port: 8000,
+					Port: "8000",
 					Host: "0.0.0.0",
 				},
 				Database: &configuration.Database{
 					Host:          "localhost",
-					Port:          5432,
+					Port:          "5432",
 					Uname:         "charlesonyewuenyi",
 					Password:      "password",
 					Database_name: "newsletter",

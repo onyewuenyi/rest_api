@@ -65,14 +65,14 @@ type Configuration struct {
 }
 
 type Server struct {
-	Port int    `mapstructure:"port,omitempty"`
+	Port string `mapstructure:"port,omitempty"`
 	Host string `mapstructure:"host,omitempty"`
 }
 
 type Database struct {
 	Uname         string `mapstructure:"uname,omitempty"`
 	Password      string `mapstructure:"password,omitempty"`
-	Port          int    `mapstructure:"port,omitempty"`
+	Port          string `mapstructure:"port,omitempty"`
 	Host          string `mapstructure:"host,omitempty"`
 	Database_name string `mapstructure:"database_name,omitempty"`
 }
